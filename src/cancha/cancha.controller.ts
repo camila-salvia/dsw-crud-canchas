@@ -30,9 +30,11 @@ function findOne(req:Request, res:Response){
   const cancha = repository.findOne({id}) //objeto 
   if (!cancha){
     return res.status(404).send({message:'Cancha no encontrada'})
-    res.json({data: cancha})
+  } else {
+      res.json({data: cancha})
   }
-}
+  }
+  
 
 //añadir una cancha
 function add(req:Request, res:Response){
