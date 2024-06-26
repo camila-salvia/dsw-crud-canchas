@@ -3,11 +3,9 @@ import { Cancha } from "./cancha.entity.js";
 
 const canchas = [
  new Cancha(
-  '11',
   'disponible'
  ),
  new Cancha(
-  '02',
   'ocupada'
  )
 ]

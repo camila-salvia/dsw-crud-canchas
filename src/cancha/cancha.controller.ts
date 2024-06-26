@@ -8,7 +8,6 @@ const repository = new CanchaRepository()
 
 function sanitizeCanchaInput (req: Request, res: Response, next: NextFunction){
   req.body.sanitizedInput = {
-    id: req.body.id,
     estado: req.body.estado
   }
   Object.keys(req.body.sanitizedInput).forEach((key)=>{
@@ -40,7 +39,6 @@ function findOne(req:Request, res:Response){
 function add(req:Request, res:Response){
   const input = req.body.sanitizedInput
   const canchaInput = new Cancha(
-    input.id, 
     input.estado
   )
   const cancha = repository.add(canchaInput)
